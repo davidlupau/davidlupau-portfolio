@@ -840,19 +840,32 @@ footer {
     }
 }
 
-/* SVG icon styling */
-.social-icon img {
-    width: 24px; 
+/* Black Social Icons */
+.black-icon {
+    color: #333333 !important;
+    background-color: #f9f9f9 !important;
+}
+
+.black-icon:hover {
+    color: #000000 !important;
+    background-color: #e0e0e0 !important;
+    transform: none !important;
+}
+
+.black-icon svg, .black-icon i {
+    color: #333333 !important;
+}
+
+.black-icon:hover svg, .black-icon:hover i {
+    color: #000000 !important;
+}
+
+.black-icon img {
+    width: 24px;
     height: 24px;
-    transition: var(--transition);
+    filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(60%) contrast(100%);
 }
 
-/* Make SVG use the container's color */
-.social-icon img {
-    filter: brightness(0) saturate(100%) invert(27%) sepia(97%) saturate(1564%) hue-rotate(358deg) brightness(105%) contrast(101%);
-}
-
-/* Change color on hover (to match your hover effect) */
-.social-icon:hover img {
-    filter: brightness(0) saturate(100%) invert(30%) sepia(57%) saturate(4747%) hue-rotate(19deg) brightness(93%) contrast(89%);
+.black-icon:hover img {
+    filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
 }
