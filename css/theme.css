@@ -1,0 +1,128 @@
+/* 
+==============================================
+THEME OPTIONS
+Author: David Lupau
+==============================================
+*/
+
+/* Default theme (light) */
+:root {
+    /* Colors */
+    --primary: #F28500;
+    --primary-light: #FF9E33;
+    --primary-dark: #D07100;
+    --secondary: #333333;
+    --background: #f9f9f9;
+    --card-bg: #ffffff;
+    --text: #333333;
+    --text-light: #666666;
+    --border: #e0e0e0;
+    --white: #ffffff;
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+    --primary: #F28500;
+    --primary-light: #FF9E33;
+    --primary-dark: #D07100;
+    --secondary: #1E1E1E;
+    --background: #121212;
+    --card-bg: #1E1E1E;
+    --text: #f0f0f0;
+    --text-light: #b0b0b0;
+    --border: #2c2c2c;
+    --white: #1E1E1E;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: var(--z-fixed);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-medium);
+}
+
+.theme-toggle:hover {
+    background-color: var(--primary-dark);
+    transform: scale(1.1);
+}
+
+/* Applying theme colors to elements */
+body {
+    background-color: var(--background);
+    color: var(--text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero, footer {
+    background-color: var(--secondary);
+    color: var(--white);
+    transition: background-color 0.3s ease;
+}
+
+.about-item, 
+.timeline-content, 
+.education-item, 
+.certificate-item,
+.contact-content,
+.project-item,
+.portfolio-item,
+.tab-content {
+    background-color: var(--card-bg);
+    transition: background-color 0.3s ease;
+}
+
+.skills-grid .skill,
+.project-details,
+.certificate-icon,
+.education-icon,
+.project-icon,
+.social-icon,
+.tab-btn.active {
+    color: var(--primary);
+}
+
+/* Dark theme specific adjustments */
+[data-theme="dark"] .about-item,
+[data-theme="dark"] .portfolio-item,
+[data-theme="dark"] .timeline-content {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .portfolio-img img,
+[data-theme="dark"] .project-content img,
+[data-theme="dark"] .gallery-item img {
+    filter: brightness(0.9);
+}
+
+/* Dark theme icons */
+[data-theme="dark"] .theme-toggle i.fa-sun {
+    display: block;
+}
+
+[data-theme="dark"] .theme-toggle i.fa-moon {
+    display: none;
+}
+
+/* Light theme icons */
+.theme-toggle i.fa-sun {
+    display: none;
+}
+
+.theme-toggle i.fa-moon {
+    display: block;
+}
+
+/* JavaScript will add 'data-theme="dark"' to the html element */

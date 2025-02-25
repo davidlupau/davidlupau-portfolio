@@ -1,0 +1,88 @@
+/* 
+==============================================
+CSS VARIABLES
+Author: David Lupau
+==============================================
+*/
+
+:root {
+    /* Colors */
+    --primary: #F28500;
+    --primary-light: #FF9E33;
+    --primary-dark: #D07100;
+    --secondary: #333333;
+    --background: #f9f9f9;
+    --text: #333333;
+    --text-light: #666666;
+    --border: #e0e0e0;
+    --white: #ffffff;
+    --error: #e53935;
+    --success: #43a047;
+    --warning: #ffb300;
+    --info: #2196f3;
+    
+    /* Spacing */
+    --spacing-xs: 0.25rem;   /* 4px */
+    --spacing-sm: 0.5rem;    /* 8px */
+    --spacing-md: 1rem;      /* 16px */
+    --spacing-lg: 2rem;      /* 32px */
+    --spacing-xl: 3rem;      /* 48px */
+    --spacing-xxl: 4rem;     /* 64px */
+    
+    /* Font sizes */
+    --font-xs: 0.75rem;      /* 12px */
+    --font-sm: 0.875rem;     /* 14px */
+    --font-md: 1rem;         /* 16px */
+    --font-lg: 1.25rem;      /* 20px */
+    --font-xl: 1.5rem;       /* 24px */
+    --font-xxl: 2rem;        /* 32px */
+    --font-xxxl: 3rem;       /* 48px */
+    
+    /* Font weights */
+    --weight-light: 300;
+    --weight-regular: 400;
+    --weight-medium: 500;
+    --weight-semibold: 600;
+    --weight-bold: 700;
+    
+    /* Border radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --radius-circle: 50%;
+    
+    /* Box shadows */
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    --shadow-md: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    --shadow-lg: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    --shadow-xl: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    
+    /* Transitions */
+    --transition-fast: all 0.2s ease;
+    --transition-medium: all 0.3s ease;
+    --transition-slow: all 0.5s ease;
+    
+    /* Z-index values */
+    --z-negative: -1;
+    --z-elevate: 1;
+    --z-dropdown: 10;
+    --z-sticky: 20;
+    --z-fixed: 30;
+    --z-modal: 40;
+    --z-popover: 50;
+    --z-tooltip: 60;
+    
+    /* Container widths */
+    --container-sm: 540px;
+    --container-md: 720px;
+    --container-lg: 960px;
+    --container-xl: 1140px;
+    
+    /* Grid breakpoints */
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+}
