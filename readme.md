@@ -60,7 +60,7 @@ david-lupau-website/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/david-lupau-website.git
+   git clone https://github.com/davidlupau/david-lupau-davidlupau-portfolio.git
    cd david-lupau-website
    ```
 
@@ -70,7 +70,7 @@ david-lupau-website/
 3. **Deploy to GitHub Pages**
    - Enable GitHub Pages in repository settings
    - Select the main branch as source
-   - Your site will be available at `https://yourusername.github.io/david-lupau-website`
+   - Your site will be available at `https://davidlupau.github.io/david-lupau-portfolio`
 
 ## Customization
 
