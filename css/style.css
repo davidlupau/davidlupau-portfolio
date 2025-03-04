@@ -90,11 +90,19 @@ img {
     color: var(--secondary);
 }
 
+[data-theme="dark"] .section-title {
+    color: var(--text); 
+}
+
 .section-subtitle {
     font-size: var(--font-md);
     text-align: center;
     margin-bottom: var(--spacing-xl);
     color: var(--text-light);
+}
+
+[data-theme="dark"] .section-subtitle {
+    color: var(--text-light); /* Slightly lighter than main text */
 }
 
 section {
