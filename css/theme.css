@@ -98,8 +98,8 @@ body {
 [data-theme="dark"] .about-item,
 [data-theme="dark"] .portfolio-item,
 [data-theme="dark"] .timeline-content {
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-}
+    background-color: var(--secondary); /* Ensures dark background */
+    color: var(--text);
 
 [data-theme="dark"] .portfolio-img img,
 [data-theme="dark"] .project-content img,
