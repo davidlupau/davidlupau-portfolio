@@ -91,10 +91,10 @@ img {
 }
 
 .section-subtitle {
-    font-size: var(--font-xxl);
+    font-size: var(--font-md);
     text-align: center;
-    margin-bottom: var(--spacing-sm);
-    color: var(--secondary);
+    margin-bottom: var(--spacing-xl);
+    color: var(--text-light);
 }
 
 section {
