@@ -18,6 +18,12 @@ Author: David Lupau
     --text-light: #666666;
     --border: #e0e0e0;
     --white: #ffffff;
+    
+    /* Shadow variables */
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+    /* Z-index variables */
+    --z-fixed: 100;
 }
 
 /* Dark theme */
@@ -31,8 +37,33 @@ Author: David Lupau
     --text: #f0f0f0;
     --text-light: #b0b0b0;
     --border: #2c2c2c;
-    --white: #ffffff;
+    --white: #1E1E1E;
+    
+    /* Shadow for dark mode */
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
+
+[data-theme="dark"] .hero h1 {
+    color: var(--white);
+}
+
+[data-theme="dark"] .hero h2 {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Fix for hero h1 with fade-in animation in dark mode */
+[data-theme="dark"] .hero h1,
+[data-theme="dark"] .hero h1.fade-in {
+    color: var(--white) !important; /* Using !important to override any animation styles */
+}
+
+/* Additional fix for any potential animation interference */
+[data-theme="dark"] .fade-in,
+[data-theme="dark"] .slide-in-left,
+[data-theme="dark"] .slide-in-right {
+    color: var(--white);
+}
+
 
 /* Theme toggle button */
 .theme-toggle {
@@ -72,7 +103,7 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.about, 
+.about-item, 
 .timeline-content, 
 .education-item, 
 .certificate-item,
@@ -80,41 +111,106 @@ body {
 .project-item,
 .portfolio-item,
 .tab-content {
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    background-color: var(--card-bg);
+    transition: background-color 0.3s ease;
 }
 
-[data-theme="dark"] .about,
-[data-theme="dark"] .portfolio-item,
-[data-theme="dark"] .timeline-content,
-[data-theme="dark"] .education,
-[data-theme="dark"] .certificate-item,
-[data-theme="dark"] .contact-content,
-[data-theme="dark"] .project-item {
-    background-color: var(--secondary); /* Ensures dark background */
+/* Fix for text color in dark mode */
+[data-theme="dark"] .section-title,
+[data-theme="dark"] .section-subtitle,
+[data-theme="dark"] .intro-text,
+[data-theme="dark"] .skill-text,
+[data-theme="dark"] .timeline-content h3,
+[data-theme="dark"] .timeline-content h4,
+[data-theme="dark"] .timeline-date,
+[data-theme="dark"] .timeline-summary,
+[data-theme="dark"] .timeline-details ul li,
+[data-theme="dark"] .education-content h3,
+[data-theme="dark"] .education-content h4,
+[data-theme="dark"] .education-date,
+[data-theme="dark"] .certificate-content h3,
+[data-theme="dark"] .certificate-content h4,
+[data-theme="dark"] .certificate-date,
+[data-theme="dark"] .portfolio-content h3,
+[data-theme="dark"] .portfolio-content p,
+[data-theme="dark"] .project-content h3,
+[data-theme="dark"] .project-role,
+[data-theme="dark"] .project-duration,
+[data-theme="dark"] .project-description,
+[data-theme="dark"] .about-item h3,
+[data-theme="dark"] .language-list li span {
     color: var(--text);
 }
 
-.skills-grid .skill,
-.project-details,
-.certificate-icon,
-.education-icon,
-.project-icon,
-.social-icon,
-.tab-btn.active {
+[data-theme="dark"] .timeline-content p,
+[data-theme="dark"] .timeline-details ul li::before,
+[data-theme="dark"] .portfolio-tags .tag,
+[data-theme="dark"] .toggle-btn {
+    color: var(--text-light);
+}
+
+/* Ensure buttons maintain visibility in dark mode */
+[data-theme="dark"] .btn {
+    border-color: var(--primary);
+}
+
+[data-theme="dark"] .secondary-btn {
     color: var(--primary);
 }
 
-/* Dark theme specific adjustments */
-[data-theme="dark"] .about,
-[data-theme="dark"] .portfolio-item,
-[data-theme="dark"] .timeline-content {
-    background-color: var(--secondary); /* Ensures dark background */
+/* Fix for navigation items in dark mode */
+[data-theme="dark"] nav a {
     color: var(--text);
+}
+
+[data-theme="dark"] nav a:hover, 
+[data-theme="dark"] nav a.active {
+    color: var(--primary);
+}
+
+/* Additional dark theme adjustments for better contrast */
+[data-theme="dark"] .about-item,
+[data-theme="dark"] .timeline-content,
+[data-theme="dark"] .education-item,
+[data-theme="dark"] .certificate-item,
+[data-theme="dark"] .contact-content,
+[data-theme="dark"] .project-item,
+[data-theme="dark"] .portfolio-item {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
 
 [data-theme="dark"] .portfolio-img img,
 [data-theme="dark"] .project-content img,
 [data-theme="dark"] .gallery-item img {
     filter: brightness(0.9);
+}
+
+/* Social icons adjustment for dark mode */
+[data-theme="dark"] .social-icon {
+    background-color: var(--card-bg);
+}
+
+[data-theme="dark"] .social-icon:hover {
+    background-color: var(--primary);
+}
+
+/* Black social icons in dark mode */
+[data-theme="dark"] .black-icon {
+    background-color: #2c2c2c !important;
+}
+
+[data-theme="dark"] .black-icon svg, 
+[data-theme="dark"] .black-icon i {
+    color: #f0f0f0 !important;
+}
+
+[data-theme="dark"] .black-icon:hover svg, 
+[data-theme="dark"] .black-icon:hover i {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .black-icon img {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
 }
 
 /* Dark theme icons */
@@ -135,4 +231,7 @@ body {
     display: block;
 }
 
-/* JavaScript will add 'data-theme="dark"' to the html element */
+/* Force white text on dark theme for hero title */
+[data-theme="dark"] .hero .hero-content h1 {
+    color: #ffffff !important;
+}

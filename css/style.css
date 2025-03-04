@@ -247,6 +247,51 @@ nav a.active {
     border-bottom: none;
 }
 
+/* Add these styles to your existing CSS */
+
+/* Updated skills formatting to match languages format */
+.language-list li i {
+    color: var(--primary);
+    margin-right: 8px;
+    font-size: var(--font-md);
+}
+
+/* Add some space between icon and text */
+.language-list li span i + span {
+    margin-left: 5px;
+}
+
+/* Make all boxes the same height */
+.about-item {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ensure titles have consistent styling */
+.about-item h3, 
+.about-item .skill-title {
+    color: var(--primary);
+    margin-bottom: var(--spacing-md);
+    font-size: var(--font-lg);
+}
+
+/* Ensure font size consistency */
+.language-list li span {
+    font-size: var(--font-sm);
+}
+
+/* Make icon alignment consistent */
+.language-list li span:first-child {
+    display: flex;
+    align-items: center;
+}
+
+/* Adjust dark mode styling */
+[data-theme="dark"] .language-list li i {
+    color: var(--primary);
+}
+
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
