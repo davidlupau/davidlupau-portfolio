@@ -8,9 +8,9 @@ Author: David Lupau
 /* ===== BASE STYLES ===== */
 :root {
     /* Colors */
-    --primary: #F28500;
-    --primary-light: #FF9E33;
-    --primary-dark: #D07100;
+    --primary: #FF6B6B;
+    --primary-light: #FF6B6B;
+    --primary-dark: #FF6B6B;
     --secondary: #333333;
     --background: #f9f9f9;
     --text: #333333;
