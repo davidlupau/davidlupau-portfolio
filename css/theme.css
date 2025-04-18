@@ -8,11 +8,11 @@ Author: David Lupau
 /* Default theme (light) */
 :root {
     /* Colors */
-    --primary: #F28500;
-    --primary-light: #FF9E33;
-    --primary-dark: #D07100;
-    --secondary: #333333;
-    --background: #f9f9f9;
+    --primary: #FF6B6B;
+    --primary-light: #FF8A8A;
+    --primary-dark: #E55757;
+    --secondary: #011936;
+    --background: #F4FFFD;
     --card-bg: #ffffff;
     --text: #333333;
     --text-light: #666666;
@@ -28,9 +28,9 @@ Author: David Lupau
 
 /* Dark theme */
 [data-theme="dark"] {
-    --primary: #F28500;
-    --primary-light: #FF9E33;
-    --primary-dark: #D07100;
+    --primary: #FF6B6B;
+    --primary-light: #FF6B6B;
+    --primary-dark: #FF6B6B;
     --secondary: #1E1E1E;
     --background: #121212;
     --card-bg: #1E1E1E;
