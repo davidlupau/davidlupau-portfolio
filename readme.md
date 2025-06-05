@@ -4,7 +4,7 @@ This repository contains the source code for my personal website, which showcase
 
 ## Overview
 
-This is a responsive personal website built with HTML, CSS, and JavaScript. The site features an animated user interface with scroll effects, expandable content sections, and a clean, professional design with an orange (#F28500) color scheme.
+This is a responsive personal website built with HTML, CSS, and JavaScript. The site features an animated user interface with scroll effects, expandable content sections, and a clean, professional design.
 
 ## Features
 
