@@ -20,18 +20,31 @@
     <header>
         <div class="container">
             <h1 class="logo">DL</h1>
-            <nav>
+
+            <nav id="mainNav">
                 <ul>
-                    <li><a href="https://www.davidlupau.me">Home</a></li>
-                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#education">Education</a></li>
                     <li><a href="#certificates">Certificates</a></li>
                     <li><a href="https://www.notion.so/1a79cd79840a8068a849dc481d0b67cf?v=27e9cd79840a8059af3b000c262bda61&source=copy_link" target="_blank">Portfolio</a></li>
                     <li><a href="https://spectacular-fish-295.notion.site/1a79cd79840a807a9656e64db511fff3?v=1a79cd79840a8110a4e7000c22ee240a" target="_blank">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
+
+            <div class="header-social">
+                <a href="https://linkedin.com/in/david-lupau" target="_blank" class="header-social-icon" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/davidlupau" target="_blank" class="header-social-icon" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </header>
 
@@ -52,19 +65,23 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">About Me</h2>
-            <p class="section-subtitle" data-aos="fade-up data-aos-delay="100">Get to know me better</p>
+            <h2 class="section-title">About Me</h2>
+            <p class="section-subtitle">Get to know me better</p>
 
-            <div class="profile-image-container" data-aos="zoom-in" data-aos-delay="200">
+            <div class="profile-image-container">
                 <img src="assets/images/davidlupau.png" alt="David Lupau" class="profile-image">
             </div>
 
-            <div class="intro-text" data-aos="fade-up" data-aos-delay="300">
-                <p>I'm building a career in data analytics, combining technical skills in Power BI, Python, and SQL with a strong foundation in business consulting and stakeholder communication.</p>
-                <p>Currently completing my BSc in Data Science and pursuing Microsoft PL-300 certification, I'm developing expertise through academic projects (including machine learning analysis of workforce data) and professional application of data visualization and statistical analysis.</p>
+            <div class="intro-text" data-aos="fade-up" data-aos-delay="400">
+                <p>I'm building a career in data analytics, combining technical skills in <span class="highlight">Power BI, Python, and SQL</span> with a strong foundation in business consulting and stakeholder communication.</p>
+
+                <p>Currently completing my <span class="highlight">BSc in Data Science</span> and pursuing <span class="highlight">Microsoft PL-300 certification</span>, I'm developing expertise through academic projects (including machine learning analysis of workforce data) and professional application of data visualization and statistical analysis.</p>
+
                 <p>My background in consulting has taught me that the best data work starts with understanding the business problem, not just the technical solution. I approach analytics with curiosity about what stakeholders actually need, not just what data can show.</p>
-                <p>I'm looking for junior data analyst opportunities where I can apply my analytical mindset and consulting skills while continuing to grow my technical depth. Particularly interested in roles where data drives real business impact, not just reporting.</p>
+
+                <p>I'm looking for <span class="highlight">junior data analyst opportunities</span> where I can apply my analytical mindset and consulting skills while continuing to grow my technical depth. Particularly interested in roles where data drives real business impact, not just reporting.</p>
             </div>
+        </div>
     </section>
 
     <section id="skills" class="about">
@@ -448,25 +465,6 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Connect With Me</h2>
-            <p class="section-subtitle">Find me across the web</p>
-            
-            <div class="contact-content">                
-                <div class="social-icons">
-                    <a href="https://linkedin.com/in/david-lupau" target="_blank" class="social-icon black-icon">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://github.com/davidlupau" target="_blank" class="social-icon black-icon">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -488,6 +486,34 @@
                 once: false,
                 mirror: false,
                 offset: 100
+            });
+        });
+    </script>
+
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            const mainNav = document.getElementById('mainNav');
+
+            mobileMenuToggle.addEventListener('click', function() {
+                mainNav.classList.toggle('active');
+                const icon = this.querySelector('i');
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            });
+
+            // Close menu when clicking a link
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    if (window.innerWidth <= 768) {
+                        mainNav.classList.remove('active');
+                        const icon = mobileMenuToggle.querySelector('i');
+                        icon.classList.add('fa-bars');
+                        icon.classList.remove('fa-times');
+                    }
+                });
             });
         });
     </script>
