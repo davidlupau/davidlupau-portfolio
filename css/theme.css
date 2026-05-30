@@ -119,6 +119,7 @@ body {
 [data-theme="dark"] .section-title,
 [data-theme="dark"] .section-subtitle,
 [data-theme="dark"] .intro-text,
+[data-theme="dark"] .intro-text p:first-child,
 [data-theme="dark"] .skill-text,
 [data-theme="dark"] .timeline-content h3,
 [data-theme="dark"] .timeline-content h4,
